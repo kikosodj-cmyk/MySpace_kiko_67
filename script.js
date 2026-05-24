@@ -2,17 +2,22 @@
 const songs = [
   "Helena - My Chemical Romance",
   "King For A Day - Pierce The Veil ft. Kellin Quinn",
+  "Choke - I DONT KNOW HOW THEY FOUND ME",
+  "Hold On Till May - Pierce The Veil",
+  "Self Control - Frank Ocean"
 ];
 
 //Add the audio file name here, make sure capitilization matches.
-const songRef = ["Helena MCR.mp3", "King for a Day Pierce The Veil.mp3"];
+const songRef = ["Helena MCR.mp3", "King for a Day Pierce The Veil.mp3",
+   "I DONT KNOW HOW BUT THEY FOUND ME -Choke.mp3", "Pierce The Veil - Hold On Till May (Track 12).mp3",
+  "Frank Ocean - Self Control.mp3"];
 
 //Add image file names here.
 const moiImages = [
-  "everythingsnotalright.jpg",
   "youdothesame.jpg",
   "everythingsnotalright.jpg",
-  "youdothesame.jpg",
+
+
 ];
 
 const audio = document.getElementById("audio-player");
@@ -84,7 +89,7 @@ const seedComments = [
     emoji: "🌙",
     name: "moonchild99",
     date: "Aug 27, 2005 9:42 PM",
-    text: "BUNNY omg ur layout is so pretty!! the red leopard is giving everything 🖤🐆",
+    text: "KIKOO omg ur layout is so pretty!! the red leopard is giving everything 🖤🐆",
   },
   {
     emoji: "💀",
