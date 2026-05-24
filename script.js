@@ -1,20 +1,28 @@
+// Add song titles here, this is what will be displayed on the website
 const songs = [
-  "Bulletproof Love - Pierce The Veil",
+  "Helena - My Chemical Romance",
   "King For A Day - Pierce The Veil ft. Kellin Quinn",
-  "Can You Feel My Heart - Bring Me The Horizon",
-  "Drown - Bring Me The Horizon",
-  "If It Means A Lot To You - A Day To Remember",
-  "Tia My Dear - Pierce The Veil",
-  "Scene One: James McAvoy - Sleeping With Sirens",
-  "Chelsea Smile - Bring Me The Horizon",
 ];
+
+//Add the audio file name here, make sure capitilization matches.
+const songRef = ["Helena MCR.mp3", "King for a Day Pierce The Veil.mp3"];
+
+//Add image file names here.
+const moiImages = [
+  "everythingsnotalright.jpg",
+  "youdothesame.jpg",
+  "everythingsnotalright.jpg",
+  "youdothesame.jpg",
+];
+
+const audio = document.getElementById("audio-player");
+
 let currentSong = 0,
   playing = false,
   progress = 0,
   timer;
 
 function togglePlay() {
-  const audio = document.getElementById("helena-audio");
   if (!audio) return;
   playing = !playing;
   document.getElementById("play-btn").textContent = playing ? "⏸" : "▶";
@@ -26,7 +34,6 @@ function togglePlay() {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("helena-audio");
   if (!audio) return;
   audio.addEventListener("timeupdate", function () {
     if (audio.duration) {
@@ -45,12 +52,16 @@ function nextSong() {
   document.getElementById("song-title").textContent = songs[currentSong];
   progress = 0;
   document.getElementById("prog").style.width = "0%";
+  audio.src = "audios/" + songRef[currentSong];
+  audio.play();
 }
 function prevSong() {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   document.getElementById("song-title").textContent = songs[currentSong];
   progress = 0;
   document.getElementById("prog").style.width = "0%";
+  audio.src = "audios/" + songRef[currentSong];
+  audio.play();
 }
 
 const friends = [
@@ -239,7 +250,28 @@ function removePhoto(i) {
   renderGallery();
 }
 
-document.getElementById("gallery-pw").addEventListener("keydown", function (e) {
-  if (e.key === "Enter") unlockGallery();
-});
 renderGallery();
+UpdateMoiImages();
+function UpdateMoiImages() {
+  console.log("Updating Moi Images...");
+  const photoGrid = document.getElementById("photo-grid");
+  var galleryEmpty = document.getElementById("gallery-empty");
+  if (moiImages.length != 0) {
+    galleryEmpty.style.display = "none";
+    for (let i = 0; i < moiImages.length; i++) {
+      var img = document.createElement("img"); // <img></img>
+      img.src = "images/moi_img/" + moiImages[i];
+      img.className = "moi-image";
+      photoGrid.appendChild(img);
+    }
+    if (moiImages.length % 3 != 0) {
+      for (let i = 0; i < 3 - (moiImages.length % 3); i++) {
+        var emptyDiv = document.createElement("div");
+        emptyDiv.className = "moi-image-empty";
+        photoGrid.appendChild(emptyDiv);
+      }
+    }
+  } else {
+    galleryEmpty.style.display = "block";
+  }
+}
