@@ -7,17 +7,19 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <div class="crack-overlay">
+    <div class="sparkle-bg" id="sparkles"></div>
+  <div class="crack-overlay">
+      <img src="images/crackedglass.png" alt="cracks" />
+      </div>
+   <div class="crack-overlay"id="crack-vertical-offset"> 
       <img src="images/broken-glass-background-vector-black.png" alt="cracks" />
     </div>
-    <div class="sparkle-bg" id="sparkles"></div>
-
     <div class="marquee-wrap">
       <span class="marquee-text">
         ⋆˙⟡ Welcome 2 my page! ⋆˙⟡ Currently listening to [REDACTED] ⋆˙⟡ Comment
         me! ⋆˙⟡ I &lt;3 my loves! ⋆˙⟡ &nbsp;&nbsp;&nbsp;&nbsp; ⋆˙⟡ Welcome 2 my
         page! ⋆˙⟡ Currently listening to [REDACTED] ⋆˙⟡ Comment me! ⋆˙⟡ I &lt;3
-        my top 8! ⋆˙⟡
+        my faves! ⋆˙⟡
       </span>
     </div>
 
@@ -51,11 +53,33 @@
                 <img src="images/me.webp" alt="profile photo" />
               </div>
 
-              <div class="username">Sc3n3_Bnuu&gt;-</div>
-              <div class="tagline">Darling, you'll be okay - Ptv, vic.F</div>
+              <div class="username"><span class="rainbow-text">✦</span>Sc3n3_Bnuu&gt;-<span class="rainbow-text">✦</span></div>
+              <div class="tagline">Darling, you'll be okay - Ptv</div>
               <div class="mood-row">Current mood: <span>cathartic ♰</span></div>
               <div class="last-online">
                 Last Online: <span>Aug 26, 2005</span>
+              </div>
+            </div>
+          </div>
+
+ <audio
+            id="audio-player"
+            src="audios/Helena MCR.mp3"
+            preload="auto"
+          ></audio>
+          <div class="music-player">
+            <div class="now-playing">˖ ݁♬⋆.Now Playing˚𝄞.:</div>
+            <div class="song-title" id="song-title">
+              Helena - My Chemical Romance
+            </div>
+            <div class="player-controls">
+              <button class="ctrl-btn" onclick="prevSong()">⏮</button>
+              <button class="ctrl-btn" id="play-btn" onclick="togglePlay()">
+                ▶
+              </button>
+              <button class="ctrl-btn" onclick="nextSong()">⏭</button>
+              <div class="progress-bar">
+                <div class="progress-fill" id="prog"></div>
               </div>
             </div>
           </div>
@@ -172,27 +196,7 @@
             </div>
           </div>
 
-          <audio
-            id="audio-player"
-            src="audios/Helena MCR.mp3"
-            preload="auto"
-          ></audio>
-          <div class="music-player">
-            <div class="now-playing">♪ Now Playing:</div>
-            <div class="song-title" id="song-title">
-              Helena - My Chemical Romance
-            </div>
-            <div class="player-controls">
-              <button class="ctrl-btn" onclick="prevSong()">⏮</button>
-              <button class="ctrl-btn" id="play-btn" onclick="togglePlay()">
-                ▶
-              </button>
-              <button class="ctrl-btn" onclick="nextSong()">⏭</button>
-              <div class="progress-bar">
-                <div class="progress-fill" id="prog"></div>
-              </div>
-            </div>
-          </div>
+         
         </div>
 
         <div class="right-col">
@@ -210,7 +214,7 @@
                 universal language (other than 67 ig...)
               </p>
               <p>
-                Halloween is my favorite holiday .˚⊹.🎃₊˚𖦹⋆ (annual excuse to
+                <span class="rainbow-text">Halloween</span> is my favorite holiday .˚⊹.🎃₊˚𖦹⋆ (annual excuse to
                 binge watch Over The Garden Wall)
               </p>
               <p style="color: #c0c0c0; letter-spacing: 1px">
@@ -226,17 +230,15 @@
                   font-family: monospace;
                 "
               >
-⣿⣿⣿⣿⣿⣷⣿⣿⣿⡅⡹⢿⠆⠙⠋⠉⠻⠿⣿⣿⣿⣿⣿⣿⣮⠻⣦⡙⢷⡑⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠡⠌⠂⣙⠻⣛⠻⠷⠐⠈⠛⢱⣮⣷⣽⣿
-⣿⣿⣿⣿⡇⢿⢹⣿⣶⠐⠁⠀⣀⣠⣤⠄⠀⠀⠈⠙⠻⣿⣿⣿⣦⣵⣌⠻⣷⢝⠦⠚⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣻⣿⣊⡃⠀⣙⠿⣿⣿⣿⣎⢮⡀⢮⣽⣿⣿
-⢿⣿⣿⣿⣧⡸⡎⡛⡩⠖⠀⣴⣿⣿⣿⠀⠀⠀⠀⠸⠇⠀⠙⢿⣿⣿⣿⣷⣌⢷⣑⢷⣄⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⠶⠛⠉⠀⠁⠀⠈⠈⠀⠠⠜⠻⣿⣆⢿⣼⣿⣿⣿
-⢐⣿⣿⣿⣿⣧⢧⣧⢻⣦⢀⣹⣿⣿⣿⣇⠀⠄⠀⠀⠀⡀⠀⠈⢻⣿⣿⣿⣿⣷⣝⢦⡹⠷⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⠈⠁⠀⠀⠀⠁⠀⠀⠀⠱⣶⣄⡀⠀⠈⠛⠜⣿⣿⣿⣿
-⠀⠊⢫⣿⣏⣿⡌⣼⣄⢫⡌⣿⣿⣿⣿⣿⣦⡈⠲⣄⣤⣤⡡⢀⣠⣿⣿⣿⣿⣿⣿⣷⣼⣍⢬⣦⡙⣿⣿⣿⣿⣿⣯⢁⡄⠀⡀⡀⠀⠄⢈⣠⢪⠀⣿⣿⣿⣦⠀⢉⢂⠹⡿⣿⣿
-⠀⠀⠄⢹⢃⢻⣟⠙⣿⣦⠱⢻⣿⣿⣿⣿⣿⣿⣷⣬⣍⣭⣥⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡙⢿⣼⡿⣿⣿⣿⣿⣿⣷⣄⠘⣱⢦⣤⡴⡿⢈⣼⣿⣿⣿⣇⣴⣶⣮⣅⢻⣿⡏
-⠀⠀⠈⠹⣇⢡⢿⡆⠻⣿⣷⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣍⡻⣿⣟⣻⣿⣿⣿⣿⣷⣦⣥⣬⣤⣴⣾⣿⣿⣿⣿⣷⣿⣿⣿⣿⣷⡜⠃
-⠀⠀⠀⢀⣘⠈⢂⠃⣧⡹⣿⣷⡄⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣅⡙⢿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⡕⠂
-⠀⠀⠀⠀⠀⠀⠛⢷⣜⢷⡌⠻⣿⣿⣦⣝⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣹⣷⣦⣹⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠉⠃⠀</pre
+<span class="rainbow-text">⠀⠀⠀⠀⠀⠀⠀⣤⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⡏⢻⣫⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠟⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡐⡄⣸⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⣿⠀⠀⠀⠀⠀
+⠀⠀⣀⠠⢝⡜⣿⣿⡟⢉⣭⡝⢿⣿⣿⣿⡟⣭⣭⠉⢻⣿⡿⡠⠒⠀⠀⠀
+⡴⣟⣿⣻⣆⢰⣿⣿⠀⢸⣿⣿⢸⣿⣿⣿⠙⣿⣿⠇⠈⣿⣿⠱⠭⠄⠀⠀
+⢷⣿⡀⣸⣿⡞⣿⣿⣄⠀⠉⠁⣼⣿⢿⣿⣧⠈⠁⠀⣰⣿⣿⣠⣴⣶⣦⣄
+⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠙⠒⠓⠒⠛⠛⠛⠛⠛⠛⠓⠻⡏⣿⣿⠿</span></pre
               >
-              <div class="silver-divider">✦ ♥ ✦ ♥ ✦ ♥ ✦</div>
+             
             </div>
           </div>
 
@@ -266,7 +268,7 @@
                   </li>
                   <li><span class="moon-bullet">⏾</span> Black eyeliner</li>
                   <li>
-                    <span class="moon-bullet">⏾</span> Thrift stores (JB ones
+                    <span class="moon-bullet">⏾</span> Thrift stores (<span class="rainbow-text">JB</span> ones
                     goated)
                   </li>
                   <li>
@@ -285,7 +287,7 @@
                 <div
                   style="font-size: 10px; color: #c0c0c0; margin-bottom: 6px"
                 >
-                  PTV, frank.O, MCR, Sabrina.C, Tyler.T.C &lt;3
+                  <span class="rainbow-text">PTV</span>, frank.O, MCR, Sabrina.C, Tyler.T.C &lt;3
                 </div>
                 <div style="font-size: 10px; color: #777; margin-bottom: 2px">
                   Shows:
@@ -293,13 +295,13 @@
                 <div
                   style="font-size: 10px; color: #c0c0c0; margin-bottom: 6px"
                 >
-                  OTGW, Gravity Falls, Inside Job, Coraline, Memoirs of a Snail
+                  <span class="rainbow-text">OTGW</span>, Gravity Falls, Inside Job, Coraline, Memoirs of a Snail
                 </div>
                 <div style="font-size: 10px; color: #777; margin-bottom: 2px">
                   Games:
                 </div>
                 <div style="font-size: 10px; color: #c0c0c0">
-                  Hades II, Ps5, Tomodachi Life (3DS &amp; Switch), Binding of
+                  Hades II, Ps5, <span class="rainbow-text">Tomodachi Life</span> (3DS &amp; Switch), Binding of
                   Isaac
                 </div>
               </div>
@@ -341,7 +343,7 @@
           <div class="panel" style="margin-bottom: 6px" id="top8-panel">
             <div class="panel-header">⁺‧₊˚ ཐི⋆ My loves ⋆ཋྀ ˚₊‧⁺</div>
             <div class="panel-body">
-              <div class="top8-grid" id="top8"></div>
+              <div class="photo-grid" id="top8"></div>
             </div>
           </div>
 
@@ -349,7 +351,7 @@
             <div class="panel-header">💬 Comments</div>
             <div class="panel-body">
               <div id="comments-list"></div>
-              <div class="silver-divider">- leave a comment -</div>
+              <div class="silver-divider">-ꨄ︎ leave a comment ꨄ︎-</div>
               <div class="add-comment" style="margin-top: 6px">
                 <input
                   type="text"

@@ -15,6 +15,7 @@ const songRef = ["Helena MCR.mp3", "King for a Day Pierce The Veil.mp3",
 //Add image file names here.
 const moiImages = [
   "youdothesame.jpg",
+  "illdrawtheshades.jpg",
   "everythingsnotalright.jpg",
 
 
@@ -70,14 +71,14 @@ function prevSong() {
 }
 
 const friends = [
-  { emoji: "🌹", name: "x_brokn_hrt_x" },
-  { emoji: "💀", name: "sk8r_jake" },
-  { emoji: "🌙", name: "moonchild99" },
-  { emoji: "🎸", name: "punxnotdead" },
-  { emoji: "🖤", name: "lonelystar_" },
-  { emoji: "🐱", name: "meowrawr&lt;3" },
-  { emoji: "🌸", name: "fallxngdown" },
-  { emoji: "⚡", name: "electric_kai" },
+  { emoji: "⋆.🦦⋆", name: "x_Tang_koa_x" },
+  { emoji: "⋆🦇ִ", name: "Emopenis_lver_69" },
+  { emoji: "☺︎", name: "djklrv" },
+  { emoji: "🕸️๋࣭ ", name: "punx_not_d3ad" },
+  { emoji: "⋆𓆩𓆪⋆", name: "xX_Black_star_Xx" },
+  { emoji: "🐈‍⬛ ྀི", name: "meowrawr&lt;3" },
+  { emoji: "✦", name: "fallxn_down_pcpc" },  
+  { emoji: ".🛸༄˖°.", name: "electric_Angxl" },
 ];
 const t8 = document.getElementById("top8");
 friends.forEach((f) => {
@@ -86,22 +87,22 @@ friends.forEach((f) => {
 
 const seedComments = [
   {
-    emoji: "🌙",
-    name: "moonchild99",
-    date: "Aug 27, 2005 9:42 PM",
-    text: "KIKOO omg ur layout is so pretty!! the red leopard is giving everything 🖤🐆",
+    emoji: "⋆.🦦⋆",
+    name: "x_Tang_koa_x",
+    date: "Aug 30, 2005 4:42 AM",
+    text: "Sabrina Carpenter is amazing...",
   },
   {
-    emoji: "💀",
-    name: "sk8r_jake",
-    date: "Aug 26, 2005 4:18 PM",
-    text: "ptv is literally life. vic fuentes could step on me. anyways hii 😭🖤",
+    emoji: "☺︎",
+    name: "djklrv",
+    date: "Apr 7, 2003 4:18 PM",
+    text: "haii you seem rly cool, lets be friends🖤",
   },
   {
-    emoji: "🌹",
-    name: "x_brokn_hrt_x",
-    date: "Aug 26, 2005 11:55 PM",
-    text: "bestie!! ur city lights photo is so so pretty. miss u come online 💔",
+    emoji: "⋆🦇࣪",
+    name: "Emopenis_lver_69",
+    date: "Feb 26, 2006 1:55 AM",
+    text: "IDK WHAT TO COMMENT uhh ptv is fire i wld let vic peg me 👅",
   },
 ];
 let comments = [];
